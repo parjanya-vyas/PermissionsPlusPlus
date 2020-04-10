@@ -1,2 +1,2 @@
-rootProject.name='Simple Messaging'
-include ':app'
+rootProject.name='PermissionsPlusPlus'
+include ':simple-messaging-app'
