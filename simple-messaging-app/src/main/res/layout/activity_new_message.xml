@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:inputType="date"
-            android:hint="@string/new_message_date_hint" />
+            android:hint="@string/new_message_time_hint" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
