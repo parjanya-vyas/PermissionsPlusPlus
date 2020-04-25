@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PermissionsPlusPlus</string>
+    <string name="new_message_sender_hint">Sender</string>
+    <string name="new_message_date_hint">Date</string>
+    <string name="new_message_body_hint">Message Content</string>
+    <string name="submit_button">Submit</string>
+    <string name="sender_title">From:</string>
+    <string name="date_title">Date:</string>
 </resources>
