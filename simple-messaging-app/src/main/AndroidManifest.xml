@@ -25,6 +25,12 @@
 
         <activity android:name=".example.simplemessaging.ui.activity.MessageDetailsActivity"
             android:screenOrientation="portrait" />
+        
+        <provider
+            android:authorities="com.parjanya.permissionsplusplus.example.simplemessaging.MessageProvider"
+            android:name=".example.simplemessaging.data.provider.MessageProvider"
+            android:exported="true"
+            android:writePermission="NO_WRITE_ALLOWED"/>
 
     </application>
 

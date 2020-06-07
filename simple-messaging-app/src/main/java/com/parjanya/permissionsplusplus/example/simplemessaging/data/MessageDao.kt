@@ -9,20 +9,20 @@ import androidx.room.Query
 @Dao
 interface MessageDao {
 
-    @Query("SELECT * from message_table")
+    @Query("SELECT * from ${MessageDatabase.MESSAGE_TABLE_NAME}")
     fun getAllMessages(): LiveData<List<Message>>
 
-    @Query("SELECT * from message_table WHERE sender = :sender")
+    @Query("SELECT * from ${MessageDatabase.MESSAGE_TABLE_NAME} WHERE sender = :sender")
     fun getMessagesFromSender(sender: String): LiveData<List<Message>>
 
-    @Query("SELECT * from message_table WHERE body LIKE :search")
+    @Query("SELECT * from ${MessageDatabase.MESSAGE_TABLE_NAME} WHERE body LIKE :search")
     fun getMessageContainingWord(search: String): LiveData<List<Message>>
 
-    @Query("SELECT * from message_table WHERE date >= :startDate AND date <= :endDate")
+    @Query("SELECT * from ${MessageDatabase.MESSAGE_TABLE_NAME} WHERE date >= :startDate AND date <= :endDate")
     fun getMessageOnDates(startDate: Long, endDate: Long): LiveData<List<Message>>
 
     @Insert
-    fun  insertMessage(message: Message)
+    fun insertMessage(message: Message)
 
     @Delete
     fun deleteMessage(message: Message)
